@@ -89,7 +89,7 @@ class WikiScraper:
                 if WikiScraper.is_valid(img_url):
                     urls.append(img_url)
             output = [i for i in urls if searchString in i]
-            return output[:5]
+            return output[:1]
         except Exception as error:
             print(f"{error=} couldn't find images, try again")
 
