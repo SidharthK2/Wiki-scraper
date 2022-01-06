@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Results</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<style>
+    .div-1 {
+        background-color: #ffd8c5;
+    }
+</style>
+
+<body>
+
+  <div class="div-1">
+    <h1>Results</h1>
+
+<p>
+<h3>Summary</h3>
+{% for i in result.get("Summary") %}
+  {{i}}
+    <br>
+  {% endfor %}
+    <br>
+
+<h3>Images</h3>
+{% for i in result.get("Images") %}
+<img src="data:image/jpeg;base64,{{ i }}"/>
+  {% endfor %}
+  <br>
+
+  <h3>References</h3>
+{% for i in result.get("References") %}
+  <a href={{i}}>{{i}}</a>
+<!--    <a href="name/{{i}}"> {{row}} </a>-->
+
+    <br>
+  {% endfor %}
+    <br>
+
+</p>
+</div>
