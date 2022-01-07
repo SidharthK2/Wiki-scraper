@@ -50,7 +50,7 @@ def index():
                 return render_template('results.html', result=result)
         except Exception as e:
             logger.info(f"{e} no results found, routed back to index")
-            return render_template('index.html', exception="Invalid search, try again")
+            # return render_template('index.html', exception="Invalid search, try again"
     else:
         logger.info("POST method not used, routed back to index")
         return render_template('index.html', exception='Use POST method')
