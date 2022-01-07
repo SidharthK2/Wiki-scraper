@@ -47,7 +47,7 @@ class WikiScraper:
 
             parser = PlaintextParser.from_string(text[:5], Tokenizer("english"))
             summarizer = LexRankSummarizer()
-            summ = summarizer(parser.document, 5)
+            summ = summarizer(parser.document, 9)
             summary = [str(i) for i in summ]
             summary1 = [i.replace('\\n', '') for i in summary]
             return summary1
