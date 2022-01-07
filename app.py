@@ -37,9 +37,9 @@ def index():
             mongoClient = DBops(username='Sidkapoor', password='mongodb')
             logger.info("DB connection established")
             if mongoClient.findDocument(searchString) is not None:
-                # logger.info("records already present in db")
+                logger.info("records already present in db")
                 result = mongoClient.findDocument(searchString)
-                # logger.info("Records found")
+                logger.info("Records found")
                 return render_template('results.html', result=result)
             else:
                 logger.info("Records not found in db")

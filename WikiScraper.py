@@ -45,13 +45,12 @@ class WikiScraper:
             except Exception as e:
                 print(f"error {e}, try again")
 
-            # parser = PlaintextParser.from_string(text[:5], Tokenizer("english"))
-            # summarizer = LexRankSummarizer()
-            # summ = summarizer(parser.document, 5)
-            # summary1 = [str(i) for i in summ]
-            # summary = [str(i) for i in summ]
-            # summary1 = [i.replace('\\n', '') for i in summary]
-            return text
+            parser = PlaintextParser.from_string(text[:5], Tokenizer("english"))
+            summarizer = LexRankSummarizer()
+            summ = summarizer(parser.document, 5)
+            summary = [str(i) for i in summ]
+            summary1 = [i.replace('\\n', '') for i in summary]
+            return summary1
         except Exception as error:
             print(f"{error=} couldn't find text, try again")
 
