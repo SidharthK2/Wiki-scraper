@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 from tqdm import tqdm
 
-# nltk.download('punkt')
+nltk.download('punkt')
 from urllib.request import urlopen as uReq
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
