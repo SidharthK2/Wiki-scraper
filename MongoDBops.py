@@ -8,7 +8,7 @@ class DBops:
         try:
             self.username = username
             self.password = password
-            self.url = f"mongodb+srv://{self.username}:{self.password}@cluster0.paodh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+            self.url = f"mongodb+srv://{self.username}:{self.password}@cluster0.lndie.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
         except Exception as e:
             raise Exception(f"(__init__): Something went wrong on initiation process\n" + str(e))
 
