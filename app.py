@@ -1,4 +1,4 @@
-import os
+
 
 from flask import Flask, render_template, request
 from flask_cors import cross_origin
@@ -56,7 +56,5 @@ def index():
         return render_template('index.html', exception='Use POST method')
 
 
-# DEFAULT_PORT = 1234
-# port = int(os.getenv('PORT', DEFAULT_PORT))
 if __name__ == "__main__":
     app.run()
