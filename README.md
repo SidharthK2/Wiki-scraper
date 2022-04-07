@@ -6,13 +6,14 @@
 
 ## Installation
 
-Simply create a virtual environment using the requirements file.  
-Run app.py
+- Configure interpreter for python 3.9
+- Create a virtual environment using the requirements file.  
 
 ## Usage
 
-Input the search string when prompted.  
-Click back on your browser to run another search.
+- Run app.py
+- Input the search string when prompted.  
+- Click back on your browser to run another search.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
